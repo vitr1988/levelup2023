@@ -18,6 +18,9 @@ public class ArithmeticOperation {
         System.out.println(and(true, false));
         System.out.println(or(true, false));
         System.out.println(not(false));
+
+        System.out.println("-------");
+        System.out.println(complexPercent(10_000, 12, 10));
     }
 
     public static int perimeter(int a, int b) {
@@ -43,5 +46,10 @@ public class ArithmeticOperation {
 
     public static boolean not(boolean flag) {
         return !flag;
+    }
+
+
+    public static double complexPercent(int baseFund, double percent, int year) {
+        return Math.round(Math.pow(1 + percent / 100, year) * baseFund);
     }
 }
