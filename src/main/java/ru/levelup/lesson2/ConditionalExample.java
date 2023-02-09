@@ -22,9 +22,12 @@ public class ConditionalExample {
     }
 
     private static void printIfNeeded(String printedText) {
+        double digit = 0.12;
         if (new Random().nextBoolean()) {
+            int value = 10 + (int) digit;
             System.out.println(printedText);
         }
+
     }
 
     public static int abs(int value) {
