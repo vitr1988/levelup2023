@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class ListRunner {
 
@@ -28,8 +29,9 @@ public class ListRunner {
             users.addAll(c);
         }
 //        for (User user : users) {
-        for (Iterator<User> iterator = users.iterator(); iterator.hasNext(); ) {
-            User user = iterator.next();
+        for (ListIterator<User> iterator = users.listIterator(users.size()); iterator.hasPrevious(); ) {
+//            User user = iterator.next();
+            User user = iterator.previous();
             System.out.println(user);
         }
 
